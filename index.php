@@ -1,8 +1,10 @@
-WELCOME !
+completed !
 <br/>
+
 <pre>
 <?php
-print `ifconfig`;
+echo "First task  to create/launch Application using Terraform!";
 ?>
+
 </pre>
 
