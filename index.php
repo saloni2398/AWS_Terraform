@@ -1,7 +1,7 @@
 WELCOME !
 <br/>
 <pre>
-<?php>
+<?php
 print `ifconfig`;
 ?>
 </pre>
