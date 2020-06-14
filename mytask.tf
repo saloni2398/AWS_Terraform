@@ -176,7 +176,7 @@ resource "aws_s3_bucket" "BucketTF" {
 }
 
 
-
+//allowing public access
 resource "aws_s3_bucket_public_access_block" "public" {
   bucket = aws_s3_bucket.BucketTF.id
 
@@ -186,7 +186,7 @@ resource "aws_s3_bucket_public_access_block" "public" {
  
 }
 
-
+//local commands to download image from github
 resource "null_resource" "nulllocal1"  {
 
 
@@ -225,7 +225,7 @@ resource "aws_s3_bucket_object" "bucket_object" {
 
 
 
-//creating cloudfront distribution
+//creating cloudfront distribution and performinf remote operation in the php file using provisioner
 
 resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
   comment = "access-identity-saloni.tf.test.bucket.s3.amazonaws.com"
@@ -310,18 +310,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
 
 }
-
-
-
-
- 
-
- 
-
-
-
-
-
 
 
 //at the end the website automatically opens
