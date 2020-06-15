@@ -1,4 +1,4 @@
-//firstTask.tf
+//firstTask
 
 //creating a region variable
 variable "enter_ur_region" {
